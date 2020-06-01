@@ -6,7 +6,7 @@ remote_theme : nielsenramon/chalk
 blog_theme: light # Or use dark
 name: Looni
 paginate: 25
-url: http://looni.online
+url: http://looni.github.io
 
 
 # Optional settings
