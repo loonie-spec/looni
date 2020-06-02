@@ -3,7 +3,7 @@ title: Looni
 tagline: The Jekyll Butler
 url: https://looni.online
 paginate: 1
-baseurl: "https://loonie-spec.github.io/looni/"
+baseurl: "looni"
 permalink: pretty
 
 # Gems
