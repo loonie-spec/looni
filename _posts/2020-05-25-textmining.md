@@ -3,10 +3,10 @@ layout: post
 title: a study on the text mining 
 ---
 
-`<This post is about the visual journalism project [그래프로 보는 이전과 달라진 한국] published in BBC’s Korean Service on 11 May.>` 
+`<This is about the visual journalism project [그래프로 보는 이전과 달라진 한국](https://www.bbc.com/korean/news-52601647) published in BBC’s Korean Service on 11 May. This post covers techniques and approaches applied to text mining and visualising the data.>` 
 
 
-This post covers techniques and approaches applied to text mining and visualising the data. Since a new coronavirus outbreak was reported in Wuhan on 31 December 2019 for the first time, the outbreak has been all over the media. My focus is on the Korean media’s coverage of the corona crisis and visualising it. 
+ Since a new coronavirus outbreak was reported in Wuhan on 31 December 2019 for the first time, the outbreak has been all over the media. My focus is on the Korean media’s coverage of the corona crisis and visualising it. 
 
 The process is broken down into three stages: 
 > 1 Web Scraping 
@@ -15,12 +15,12 @@ The process is broken down into three stages:
 
 ### 1 Web Scraping
 
-Using the news search function of Naver News[^1](), I collected news articles by keyword ‘Corona19(코로나19 in Korean)’ and by date from 20 Jan 2020 to 30 April 2020. 
+Using the news search function of Naver News\<sup\>[1]()(#footnote_1)\</sup\>_ I collected news articles by keyword ‘Corona19(코로나19 in Korean)’ and by date from 20 Jan 2020 to 30 April 2020. 
 
 The search keyword Corona19 is a common name that Korean media call Covid-19. I set the date range from 20 January, the day the first confirmed case was announced on in Korea. Then, I scrapped the website every 10 days. 
 
 There are three ways to scrape news articles from Naver News on R: 
-Naver Open API, N2H4[^2]() (R package), rvest(R package) 
+Naver Open API, N2H4\<sup\>[2]()(#footnote_2)\</sub)_ (R package), rvest(R package) 
 
 ‘rvest’ is the most reliable package I can use to crawl the website for a specific date range. 
 
@@ -52,7 +52,6 @@ Which one do you like the most?
 [packed bubble chart][4]
 ![packed bubble chart]()(bubblesmall.html)
 
-
 [split packed bubble chart][6]
 
 
@@ -70,12 +69,12 @@ He also said that natural language processing is a highly subjective matter.
 
 
 ---- 
-[^1](): Naver is the leading portal site in Korea. Its news service Naver News [Naver news][8]`http://news.naver.com)` is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles. 
+\<a name=“footnote_1”\>1\</a\>: Naver is the leading portal site in Korea. Its news service [Naver news][7]`http://news.naver.com)` is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles. 
 
-[^2](): [N2H4][10]`https://github.com/forkonlp/N2H4` is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)
+\<a name=“footnote_2”\>2\</a\>: [N2H4][8]`https://github.com/forkonlp/N2H4` is the R package for Naver News Text Crawling.
 
 [3]:	https://public.flourish.studio/visualisation/2576893/
 [4]:	file:///.file/id=6571367.1940538
 [6]:	file:///.file/id=6571367.1940355
-[8]:	(http://news.naver.com)
-[10]:	https://github.com/forkonlp/N2H4
+[7]:	(http://news.naver.com)
+[8]:	https://github.com/forkonlp/N2H4
