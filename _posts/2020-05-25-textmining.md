@@ -6,6 +6,7 @@ title: A study on the text mining
 
 **Hello!** I recently published the visual journalism project [그래프로 보는 이전과 달라진 한국](https://www.bbc.com/korean/news-52601647) in BBC’s Korean Service on 11 May. This post covers techniques and approaches applied to text mining and visualising the data.
 {: .message }
+![Screenshot 2020-05-25 at 12 39 53](https://user-images.githubusercontent.com/56850104/83526389-4aa14780-a4de-11ea-8a89-990eb64acdad.png)
 
 
 Since a new coronavirus outbreak was reported in Wuhan on 31 December 2019 for the first time, the outbreak has been all over the media. My focus is on the Korean media’s coverage of the corona crisis and visualising it.
@@ -56,10 +57,10 @@ I created interactive bubble charts as well.
 Which one do you like the most?
 
 [packed bubble chart](https://codepen.io/looniii/pen/KKVPYQx)
-![bubble small](statics/img/bs.png “bubble small”)
+![bs](https://user-images.githubusercontent.com/56850104/83526120-de264880-a4dd-11ea-847b-a2a03b9c6c0a.png)
 
 [split packed bubble chart](https://codepen.io/looniii/pen/YzwKMLp)
-![bubble big](statics/img/bb.png “bubble big”)
+![bb](https://user-images.githubusercontent.com/56850104/83526293-22194d80-a4de-11ea-9915-85187f6a4ade.png)
 
 ### One more thing 
 
@@ -75,7 +76,7 @@ He also said that natural language processing is a highly subjective matter.
 I agree with him. Tools make you life easier, but you have to know how to use them. 
 
 
-—
-[1]: Naver is the leading portal site in Korea. Its news service Naver News(http://news.naver.com) is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles. 
+---
+[1] Naver is the leading portal site in Korea. Its news service Naver News(http://news.naver.com) is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles. 
 
-[2]: N2H4 is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)
+[2] N2H4 is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)
