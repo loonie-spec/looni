@@ -6,7 +6,7 @@ title: A study on the text mining
 
 **Hello!** I recently published the visual journalism project [그래프로 보는 이전과 달라진 한국](https://www.bbc.com/korean/news-52601647) in BBC’s Korean Service on 11 May. This post covers techniques and approaches applied to text mining and visualising the data.
 {: .message }
-![Screenshot 2020-05-25 at 12 39 53](https://user-images.githubusercontent.com/56850104/83526389-4aa14780-a4de-11ea-8a89-990eb64acdad.png)
+
 
 
 Since a new coronavirus outbreak was reported in Wuhan on 31 December 2019 for the first time, the outbreak has been all over the media. My focus is on the Korean media’s coverage of the corona crisis and visualising it.
