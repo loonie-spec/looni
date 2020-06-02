@@ -1,11 +1,9 @@
-remote_theme : poole/poole
-
 # Setup
-title: Poole
+title: Looni
 tagline: The Jekyll Butler
 url: https://looni.online
 paginate: 1
-baseurl: "loonie-spec.github.io/looni"
+baseurl: "https://loonie-spec.github.io/looni/"
 permalink: pretty
 
 # Gems
