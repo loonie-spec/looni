@@ -7,7 +7,7 @@ title: A study on the text mining
 **Hello!** I recently published the visual journalism project [그래프로 보는 이전과 달라진 한국](https://www.bbc.com/korean/news-52601647) in BBC’s Korean Service on 11 May. This post covers techniques and approaches applied to text mining and visualising the data.
 {: .message }
 
-
+![Screenshot 2020-05-25 at 12 39 53](https://user-images.githubusercontent.com/56850104/83526389-4aa14780-a4de-11ea-8a89-990eb64acdad.png)
 
 Since a new coronavirus outbreak was reported in Wuhan on 31 December 2019 for the first time, the outbreak has been all over the media. My focus is on the Korean media’s coverage of the corona crisis and visualising it.
 
@@ -53,7 +53,8 @@ Normally word cloud are used to visualise words that appear the most frequently 
 
 [This is an English ver. bubble chart](https://public.flourish.studio/visualisation/2576893)
 
-I created interactive bubble charts as well.
+
+I created interactive bubble charts as well. You can see how I created them when you click the links below. 
 Which one do you like the most?
 
 [packed bubble chart](https://codepen.io/looniii/pen/KKVPYQx)
@@ -61,6 +62,8 @@ Which one do you like the most?
 
 [split packed bubble chart](https://codepen.io/looniii/pen/YzwKMLp)
 ![bb](https://user-images.githubusercontent.com/56850104/83526293-22194d80-a4de-11ea-9915-85187f6a4ade.png)
+
+
 
 ### One more thing 
 
@@ -74,6 +77,7 @@ Chel-Hee Lee, who is an adjunct assistant professor of University of Calgary in 
 He also said that natural language processing is a highly subjective matter.
 
 I agree with him. Tools make you life easier, but you have to know how to use them. 
+
 
 
 ---
