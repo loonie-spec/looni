@@ -24,7 +24,7 @@ Using the news search function of Naver News<sup id="a1">[1][2]</sup> I collecte
 The search keyword Corona19 is a common name that Korean media call Covid-19. I set the date range from 20 January, the day the first confirmed case was announced on in Korea. Then, I scrapped the website every 10 days.
 
 There are three ways to scrape news articles from Naver News on R:
-rvest(R package), Naver Open API, N2H4<sup id="a2">[2][3]</sub> (R package)
+rvest(R package), Naver Open API, N2H4<sup id="a2">[2][3]</sup> (R package)
 
 ‘rvest’ is the most reliable package I can use to crawl the website for a specific date range.
 
@@ -43,8 +43,6 @@ buildDictionary(user\_dic = data.frame(add\_words, rep("ncn", length(add\_words)
 ```
 ````
 
-But it didn’t successfully delete the word and I had to manually clean it…
-
 
 ### 3 Visualising
 
@@ -52,17 +50,17 @@ To explore the most frequently used top 10 keywords by period I created an inter
 
 Normally word cloud are used to visualise words that appear the most frequently in the source. But my intention is compared keywords by period. The bubble chart with the drop-down list does the job better in such a case.
 
-[This is an English ver. bubble chart]()
+[This is an English ver. bubble chart](https://public.flourish.studio/visualisation/2576893)
 
 I created interactive bubble charts as well.
 Which one do you like the most?
 
-[packed bubble chart][5](https://codepen.io/looniii/pen/KKVPYQx)
+[packed bubble chart](https://codepen.io/looniii/pen/KKVPYQx)
 
-[split packed bubble chart][6](https://codepen.io/looniii/pen/YzwKMLp)
+[split packed bubble chart](https://codepen.io/looniii/pen/YzwKMLp)
 
 
-### 4 Translating
+### One more thing 
 
 Translating is an extra step in workflow for sharing the dataset with colleagues and tutors who speak different languages.
 
@@ -73,15 +71,9 @@ Chel-Hee Lee, who is an adjunct assistant professor of University of Calgary in 
 “It may be a good idea to use GoogleLanguageR to translate into English. However, it is necessary to translate manually. Translation is a subjective matter at the end.”
 He also said that natural language processing is a highly subjective matter.
 
+I agree with him. Tools make you life easier, but you have to know how to use them. 
+
 —
-[^1][7]: Naver is the leading portal site in Korea. Its news service Naver News(http://news.naver.com) is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles. 
+Naver is the leading portal site in Korea. Its news service Naver News(http://news.naver.com) is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles. 
 
- [^2][8]: N2H4 is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)
-
-[1]:	https://www.bbc.com/korean/news-52601647
-[2]:	#footnote1
-[3]:	#footnote2
-[5]:	(https://codepen.io/looniii/pen/KKVPYQx) "bubble small"
-[6]:	(https://codepen.io/looniii/pen/YzwKMLp) "bubble big"
-[7]:	%20http://news.naver.com%20
-[8]:	https://github.com/forkonlp/N2H4
+N2H4 is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)
