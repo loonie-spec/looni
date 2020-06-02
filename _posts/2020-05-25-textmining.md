@@ -52,6 +52,8 @@ To explore the most frequently used top 10 keywords by period I created an inter
 Normally word cloud are used to visualise words that appear the most frequently in the source. But my intention is compared keywords by period. The bubble chart with the drop-down list does the job better in such a case.
 
 [This is an English ver. bubble chart](https://public.flourish.studio/visualisation/2576893)
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/2576893" data-url="https://flo.uri.sh/visualisation/2576893/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
 
 
 I created interactive bubble charts as well. You can see how I created them when you click the links below. 
@@ -59,6 +61,7 @@ Which one do you like the most?
 
 [packed bubble chart](https://codepen.io/looniii/pen/KKVPYQx)
 ![bs](https://user-images.githubusercontent.com/56850104/83526120-de264880-a4dd-11ea-847b-a2a03b9c6c0a.png)
+
 
 [split packed bubble chart](https://codepen.io/looniii/pen/YzwKMLp)
 ![bb](https://user-images.githubusercontent.com/56850104/83526293-22194d80-a4de-11ea-9915-85187f6a4ade.png)
