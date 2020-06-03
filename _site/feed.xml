@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/looni/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/looni/" rel="alternate" type="text/html" /><updated>2020-06-03T17:19:54+01:00</updated><id>http://localhost:4000/looni/feed.xml</id><title type="html">Looni Park</title><subtitle>Hi! I’m a journalist based in London. I am interested in visual data stories and like share my ideas with you.</subtitle><entry><title type="html">A study on the text mining</title><link href="http://localhost:4000/looni/2020/05/25/textmining.html" rel="alternate" type="text/html" title="A study on the text mining" /><published>2020-05-25T00:00:00+01:00</published><updated>2020-05-25T00:00:00+01:00</updated><id>http://localhost:4000/looni/2020/05/25/textmining</id><content type="html" xml:base="http://localhost:4000/looni/2020/05/25/textmining.html">&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Hello!&lt;/strong&gt; I recently published the visual journalism project &lt;a href=&quot;https://www.bbc.com/korean/news-52601647&quot;&gt;그래프로 보는 이전과 달라진 한국&lt;/a&gt; in BBC’s Korean Service on 11 May. This post covers techniques and approaches applied to text mining and visualising the data.&lt;/p&gt;
+
+&lt;p&gt;Since a new coronavirus outbreak was reported in Wuhan on 31 December 2019 for the first time, the outbreak has been all over the media. My focus is on the Korean media’s coverage of the corona crisis and visualising it.&lt;/p&gt;
+
+&lt;p&gt;The process is broken down into three stages:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1 Web Scraping&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2 Natural Language Processing&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;3 Visualising&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;1-web-scraping&quot;&gt;1 Web Scraping&lt;/h3&gt;
+
+&lt;p&gt;Using the news search function of Naver News&lt;sup id=&quot;a1&quot;&gt;&lt;a href=&quot;https://www.bbc.com/korean/news-52601647&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; I collected news articles by keyword ‘Corona19(코로나19 in Korean)’ and by date from 20 Jan 2020 to 30 April 2020.&lt;/p&gt;
+
+&lt;p&gt;The search keyword Corona19 is a common name that Korean media call Covid-19. I set the date range from 20 January, the day the first confirmed case was announced on in Korea. Then, I scrapped the website every 10 days.&lt;/p&gt;
+
+&lt;p&gt;There are three ways to scrape news articles from Naver News on R:
+rvest(R package), Naver Open API, N2H4&lt;sup id=&quot;a2&quot;&gt;&lt;a href=&quot;https://public.flourish.studio/visualisation/2576893&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; (R package)&lt;/p&gt;
+
+&lt;p&gt;‘rvest’ is the most reliable package I can use to crawl the website for a specific date range.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-natural-language-processing&quot;&gt;2 Natural Language Processing&lt;/h3&gt;
+
+&lt;p&gt;The first step to analyse articles was to break down the text into separate sentences. In this study, the Korean morphological analyser KoNLP was used for morpheme analysis. KoNLP is the only Korean natural language processing toolkit on R. With the SimplePos22 function of KoNLP I was able to extract nouns from the news articles and POS tagging.&lt;/p&gt;
+
+&lt;p&gt;The most complex part was identifying stop words. KoNLP can flag and filter them out by checking a hardcoded list of known stop words, as in the code below.
+I could also use the buildDictionary function to add stop words to delete. Since I didn’t need “coronavirus infection(코로나바이러스 감염증)”, I added them into the dictionary let delete them.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add\_words &amp;lt;- c(&quot;코로나바이러스 감염증&quot;)
+buildDictionary(user\_dic = data.frame(add\_words, rep(&quot;ncn&quot;, length(add\_words))), replace\_usr\_dic = T)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-visualising&quot;&gt;3 Visualising&lt;/h3&gt;
+
+&lt;p&gt;To explore the most frequently used top 10 keywords by period I created an interactive bubble chart with the drop-down list for filtering date ranges.&lt;/p&gt;
+
+&lt;p&gt;Normally word cloud are used to visualise words that appear the most frequently in the source. But my intention is compared keywords by period. The bubble chart with the drop-down list does the job better in such a case.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://public.flourish.studio/visualisation/2576893&quot;&gt;An English-language version of the bubble chart&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;flourish-embed flourish-hierarchy&quot; data-src=&quot;visualisation/2576893&quot; data-url=&quot;https://flo.uri.sh/visualisation/2576893/embed&quot;&gt;&lt;script src=&quot;https://public.flourish.studio/resources/embed.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;I created interactive bubble charts as well. You can see how I created them when you click the links below.
+Which one do you like the most?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/looniii/pen/KKVPYQx&quot;&gt;packed bubble chart&lt;/a&gt;
+&lt;img src=&quot;&quot; alt=&quot;Screenshot 2020-06-03 at 17 14 02&quot; /&gt;(https://user-images.githubusercontent.com/56850104/83661529-2ae15080-a5be-11ea-8a1e-e1e11909b2d6.png)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/looniii/pen/YzwKMLp&quot;&gt;split packed bubble chart&lt;/a&gt;
+&lt;img src=&quot;&quot; alt=&quot;Screenshot 2020-06-03 at 17 15 35&quot; /&gt;(https://user-images.githubusercontent.com/56850104/83661543-2e74d780-a5be-11ea-9dc8-3493db6cc4a5.png)&lt;/p&gt;
+
+&lt;h3 id=&quot;one-more-thing&quot;&gt;One more thing&lt;/h3&gt;
+
+&lt;p&gt;Translating is an extra step in workflow for sharing the dataset with colleagues and tutors who speak different languages.&lt;/p&gt;
+
+&lt;p&gt;My initial plan was extracting more than 200 keywords each period to compare the main content of the news articles. Google translation API is a good option to translate a large amount of text.&lt;/p&gt;
+
+&lt;p&gt;I contacted engineers involved in making KoLNP to find a suitable machine translation for the Korean language.
+Chel-Hee Lee, who is an adjunct assistant professor of University of Calgary in Canada, said;
+“It may be a good idea to use GoogleLanguageR to translate into English. However, it is necessary to translate manually. Translation is a subjective matter at the end.”
+He also said that natural language processing is a highly subjective matter.&lt;/p&gt;
+
+&lt;p&gt;I agree with him. Tools make you life easier, but you have to know how to use them.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.bbc.com/korean/news-52601647&quot;&gt;1&lt;/a&gt; Naver is the leading portal site in Korea. Its news service Naver News(http://news.naver.com) is a news aggregator website that takes a large portion of news consumption in Korea. It currently sources content from 52 news outlets in real-time. The site stores the articles on its database and presents all of them on its website. It means being able to read all news articles in real-time from all major news outlets on one website in one standardised format. Therefore, it is the place for scraping news articles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://public.flourish.studio/visualisation/2576893&quot;&gt;2&lt;/a&gt; N2H4 is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello! I recently published the visual journalism project 그래프로 보는 이전과 달라진 한국 in BBC’s Korean Service on 11 May. This post covers techniques and approaches applied to text mining and visualising the data.</summary></entry></feed>
