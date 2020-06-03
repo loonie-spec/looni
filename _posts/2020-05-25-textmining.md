@@ -34,8 +34,8 @@ The first step to analyse articles was to break down the text into separate sent
 The most complex part was identifying stop words. KoNLP can flag and filter them out by checking a hardcoded list of known stop words, as in the code below.
 I could also use the buildDictionary function to add stop words to delete. Since I didn’t need “coronavirus infection(코로나바이러스 감염증)”, I added them into the dictionary let delete them.
 
-	add\_words <- c("코로나바이러스 감염증")
-	buildDictionary(user\_dic = data.frame(add\_words, rep("ncn", length(add\_words))), replace\_usr\_dic = T)
+    add\_words <- c("코로나바이러스 감염증")
+    buildDictionary(user\_dic = data.frame(add\_words, rep("ncn", length(add\_words))), replace\_usr\_dic = T)
 
 ### 3 Visualising
 
@@ -51,13 +51,10 @@ I created interactive bubble charts as well. You can see how I created them when
 Which one do you like the most?
 
 [packed bubble chart][5]
-![Screenshot 2020-06-03 at 17 14 02]()(https://user-images.githubusercontent.com/56850104/83661529-2ae15080-a5be-11ea-8a1e-e1e11909b2d6.png)  
-
+![small](https://user-images.githubusercontent.com/56850104/83661529-2ae15080-a5be-11ea-8a1e-e1e11909b2d6.png)
 
 [split packed bubble chart][7]
-![Screenshot 2020-06-03 at 17 15 35]()(https://user-images.githubusercontent.com/56850104/83661543-2e74d780-a5be-11ea-9dc8-3493db6cc4a5.png)  
-
-
+![big](https://user-images.githubusercontent.com/56850104/83661543-2e74d780-a5be-11ea-9dc8-3493db6cc4a5.png)
 
 ### One more thing
 
@@ -78,11 +75,11 @@ I agree with him. Tools make you life easier, but you have to know how to use th
 
 [2][10] N2H4 is the R package for Naver News Text Crawling. For more information, visit the website(https://github.com/forkonlp/N2H4)
 
-[1]:	https://www.bbc.com/korean/news-52601647
-[2]:	https://www.bbc.com/korean/news-52601647
-[3]:	https://public.flourish.studio/visualisation/2576893
-[4]:	https://public.flourish.studio/visualisation/2576893
-[5]:	https://codepen.io/looniii/pen/KKVPYQx
-[7]:	https://codepen.io/looniii/pen/YzwKMLp
-[9]:	https://www.bbc.com/korean/news-52601647
-[10]:	https://public.flourish.studio/visualisation/2576893
+[1]: https://www.bbc.com/korean/news-52601647
+[2]: https://www.bbc.com/korean/news-52601647
+[3]: https://public.flourish.studio/visualisation/2576893
+[4]: https://public.flourish.studio/visualisation/2576893
+[5]: https://codepen.io/looniii/pen/KKVPYQx
+[7]: https://codepen.io/looniii/pen/YzwKMLp
+[9]: https://www.bbc.com/korean/news-52601647
+[10]: https://public.flourish.studio/visualisation/2576893
